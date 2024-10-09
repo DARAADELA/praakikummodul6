@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>variabel JavaScript</title>
+</head>
+<p>
+<script language="javaScript">
+let nama= "DARA ADELA";
+document.writeln(DARA ADELA);
+
+  nama = 123;
+document.writeln(DARA ADELA)
+
+nama= true;
+document.writeln(DARA ADELA)
+</script>
+</p>
+</body>
+</html>
