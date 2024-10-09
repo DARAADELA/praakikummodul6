@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang= "en">
+<head>
+<title> percabangan javascript</title>
+</head>
+<body>
+<p>
+<script language="javascript">
+let nama = "DARA ADELA";
+documen.write (( "halo " + nama + "!</br>").repeat(5));
+</script>
+</p>
+
+<script>
+let barang = ["barang 1" , "barang 2", "barang 3"];
+for (indeks in  barang) {
+document.write ("<p>barang nomor " + indeks + " : " + barang [indeks] + "</p>");
+}
+</script>
+</p>
+</body>
+</html>
