@@ -11,13 +11,19 @@
         const persentaseDiskon = 0.10;
         let totalHarga = hargaBarang * jumlahBarang;
         let diskon = 0;
+
+        // Cek apakah jumlah barang lebih dari batas untuk mendapatkan diskon
         if (jumlahBarang > batasDiskon) {
             diskon = totalHarga * persentaseDiskon;
         }
+
         let hargaSetelahDiskon = totalHarga - diskon;
-        console.log("Harga keseluruhan tanpa diskon: Rp" + totalHarga);
-        console.log("Diskon yang diberikan: Rp" + diskon);
-        console.log("Harga setelah diskon: Rp" + hargaSetelahDiskon);
+
+        // Menampilkan hasil ke alert
+        alert("Harga keseluruhan tanpa diskon: Rp" + totalHarga + 
+              "\nDiskon yang diberikan: Rp" + diskon + 
+              "\nHarga setelah diskon: Rp" + hargaSetelahDiskon);
     </script>
 </body>
 </html>
+
