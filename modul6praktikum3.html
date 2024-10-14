@@ -1,30 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Percabangan JavaScript</title>
+    <title>Bonus Salon Pelanggan</title>
 </head>
 <body>
     <script>
-        let alatIT = ["perangkat satu", "perangkat dua", "perangkat tiga"];
+        let totalKunjungan = 15; 
 
-        // Menampilkan daftar perangkat dengan alert
-        alert("Berikut perangkat yang terdapat dalam array:\n" + alatIT.join("\n"));
+        const kunjunganUntukBonus = 10; 
+        let sisaKunjungan = totalKunjungan % kunjunganUntukBonus; 
+        let bonus = Math.floor(totalKunjungan / kunjunganUntukBonus);
 
-        // Data pembeli
-        const pembeli = {
-            nama: "nama pembeli",
-            usia: 20,
-            asal: "asal daerah"
-        };
+        console.log("Total kunjungan: " + totalKunjungan);
+        console.log("Total potongan kupon yang dimiliki: " + sisaKunjungan);
 
-        // Menggabungkan data pembeli menjadi satu string
-        let dataPembeli = "Berikut data pembeli yang di-input-kan:\n" +
-                          "Nama: " + pembeli.nama + "\n" +  // Menggunakan dot notation
-                          "Usia: " + pembeli.usia + "\n" +  // Menggunakan dot notation
-                          "Asal: " + pembeli.asal;           // Menggunakan dot notation
-
-        // Menampilkan data pembeli dengan alert
-        alert(dataPembeli);
+        if (bonus > 0) {
+            console.log("Anda sudah mendapatkan " + bonus + " kali kunjungan gratis!");
+        } else {
+            console.log("Anda belum mendapatkan kunjungan gratis.");
+        }
     </script>
 </body>
 </html>
