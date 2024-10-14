@@ -1,12 +1,16 @@
-<!DOCTYPE html>
+
+
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Status Kelulusan Siswa</title>
 </head>
 <body>
     <script>
+        // Standar kelulusan
         const standarKelulusan = 60;
 
+        // Data siswa
         let siswa = [
             { nama: "Andi", nilai: { matematika: 70, biologi: 80, fisika: 70, kimia: 90 } },
             { nama: "Ria", nilai: { matematika: 90, biologi: 65, fisika: 80, kimia: 70 } },
@@ -15,6 +19,7 @@
             { nama: "Putri", nilai: { matematika: 70, biologi: 100, fisika: 80, kimia: 75 } }
         ];
 
+        // Fungsi untuk cek kelulusan
         function cekKelulusan(nilai) {
             return nilai.matematika >= standarKelulusan &&
                    nilai.biologi >= standarKelulusan &&
@@ -22,9 +27,11 @@
                    nilai.kimia >= standarKelulusan;
         }
 
+        // Array untuk menyimpan nama siswa lulus dan tidak lulus
         let lulus = [];
         let tidakLulus = [];
 
+        // Memeriksa kelulusan setiap siswa
         for (let i = 0; i < siswa.length; i++) {
             if (cekKelulusan(siswa[i].nilai)) {
                 lulus.push(siswa[i].nama);
@@ -32,8 +39,16 @@
                 tidakLulus.push(siswa[i].nama);
             }
         }
+
+        // Menampilkan hasil kelulusan
+        if (lulus.length === siswa.length) {
+            console.log("Semua Lulus");
+        } else if (tidakLulus.length === siswa.length) {
+            console.log("Semua Tidak Lulus");
+        } else {
+            console.log("Siswa yang lulus: " + lulus.join(", "));
+            console.log("Siswa yang tidak lulus: " + tidakLulus.join(", "));
+        }
     </script>
-</p>
 </body>
 </html>
-    
